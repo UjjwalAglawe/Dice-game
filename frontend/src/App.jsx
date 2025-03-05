@@ -18,7 +18,7 @@ function App() {
 
     setRolling(true);
     try {
-      const res = await axios.post(`http://localhost:5000/roll-dice`, {
+      const res = await axios.post(`https://dice-game-2ogt.onrender.com/roll-dice`, {
         betAmount,
         chosenNumber,
         balance
