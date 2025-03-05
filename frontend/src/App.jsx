@@ -10,6 +10,19 @@ function App() {
   const [rolling, setRolling] = useState(false);
   const [result, setResult] = useState(null);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://dice-game-2ogt.onrender.com/');
+        console.log(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  },);
+
   const handleRollDice = async () => {
     if (betAmount <= 0 || betAmount > balance) {
       alert("Invalid bet amount!");
