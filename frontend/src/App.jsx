@@ -25,7 +25,7 @@ function App() {
 
   const handleRollDice = async () => {
     if (betAmount <= 0 || betAmount > balance) {
-      alert("Invalid bet amount!");
+      alert("Invalid bet amount! ");
       return;
     }
 
